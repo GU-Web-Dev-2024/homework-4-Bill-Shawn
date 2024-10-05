@@ -1,0 +1,101 @@
+/*-- Xinye Bao, CS-332, HW 4, 2024-10-04--> */
+
+/* Reset for maintainning */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Give the background colors to Fall colors */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Give the colors to Halloween colors */
+header {
+    background-color: #ff7518;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+/* Give the colors to Halloween colors */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #227;
+}
+
+/* Set up flexbox and flexible part for suiting the screen.*/
+.candy-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    max-width: 80%; /* Screen Size adapter */
+    background-color: #333;
+    border: 5px solid #ff7518;
+    border-radius: 10px;
+}
+
+/* Set up for the individual box.*/
+.candy-box {
+    background-color: #444;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    border: 2px solid #ff7518;
+}
+
+/* Add the Hover effects.*/
+.candy-box:hover {
+    transform: scale(1.05);
+    background-color: #ff7518; /* Hover effect */
+}
+
+.candy-box img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Bonus Challanges for Footer effects*/
+footer {
+    background-color: #ff7518;
+    text-align: center;
+    padding: 15px;
+    color: #FFF;
+}
+
+/* Bonus Challanges for hover effects*/
+@keyframes bounce {
+    0%, 25%, 50%, 75%, 100% {
+        transform: translateY(0);
+    }
+    35% {
+        transform: translateY(-30px);
+    }
+    80% {
+        transform: translateY(-15px);
+    }
+}
+
+.candy-box:hover {
+    animation: bounce 1s ease;
+}
